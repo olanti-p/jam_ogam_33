@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=3 uid="uid://66f6qic1iq5x"]
+
+[ext_resource type="PackedScene" uid="uid://c6dmumc0t86e8" path="res://scenes/levels/level_base.tscn" id="1_gk82i"]
+[ext_resource type="Script" path="res://scenes/levels/level_one.gd" id="2_c4qjr"]
+[ext_resource type="Texture2D" uid="uid://cj068xak4fdki" path="res://gfx/placeholder/terrain_0.png" id="3_pi7g5"]
+[ext_resource type="Texture2D" uid="uid://34cnw73gs6c1" path="res://gfx/placeholder/terrain_1.png" id="4_ste88"]
+[ext_resource type="Texture2D" uid="uid://d0hofx7h6ylb" path="res://gfx/placeholder/terrain_2.png" id="5_suepd"]
+[ext_resource type="Texture2D" uid="uid://cobftewajo5ku" path="res://gfx/placeholder/terrain_3.png" id="6_brgt0"]
+[ext_resource type="Texture2D" uid="uid://b65q87fp15olq" path="res://gfx/placeholder/terrain_4.png" id="7_xmdc4"]
+
+[node name="LevelOne" instance=ExtResource("1_gk82i")]
+script = ExtResource("2_c4qjr")
+
+[node name="Label" type="Label" parent="Background" index="0"]
+offset_left = 262.0
+offset_top = 281.0
+offset_right = 447.0
+offset_bottom = 356.0
+text = "[W], [A], [S], [D] - Move
+[Space] - Jump
+[Shift] - Increase friction"
+
+[node name="CollisionPolygon2D" parent="Ground/StaticBody2D" index="0"]
+polygon = PackedVector2Array(3, 227, 61, 228, 79, 244, 77, 405, 95, 458, 130, 477, 408, 488, 479, 442, 504, 445, 540, 453, 636, 383, 659, 299, 759, 293, 765, 382, 848, 440, 884, 433, 956, 482, 991, 473, 1022, 471, 1043, 494, 1106, 502, 1107, 596, 1101, 680, 1124, 706, 1171, 709, 1202, 686, 1204, 651, 1192, 618, 1153, 586, 1148, 559, 1161, 529, 1205, 487, 1253, 455, 1280, 403, 1285, -456, 1541, -664, 1466, 854, -207, 871, -251, -680, 1499, -670, 1475, -478, -3, -500)
+
+[node name="Graphics" type="Node2D" parent="Ground" index="1"]
+
+[node name="Terrain0" type="Sprite2D" parent="Ground/Graphics" index="0"]
+position = Vector2(179, 362)
+scale = Vector2(2.92401, 2.92401)
+texture = ExtResource("3_pi7g5")
+
+[node name="Terrain1" type="Sprite2D" parent="Ground/Graphics" index="1"]
+position = Vector2(584, 337)
+scale = Vector2(3.46841, 3.46841)
+texture = ExtResource("4_ste88")
+
+[node name="Terrain2" type="Sprite2D" parent="Ground/Graphics" index="2"]
+position = Vector2(989.56, 333)
+scale = Vector2(2.86625, 3.48563)
+texture = ExtResource("5_suepd")
+
+[node name="Terrain3" type="Sprite2D" parent="Ground/Graphics" index="3"]
+position = Vector2(1243, 545)
+scale = Vector2(2.74659, 2.74659)
+texture = ExtResource("6_brgt0")
+
+[node name="Terrain4" type="Sprite2D" parent="Ground/Graphics" index="4"]
+position = Vector2(7, 35)
+scale = Vector2(3.08, 3.08)
+texture = ExtResource("7_xmdc4")
+
+[node name="Terrain5" type="Sprite2D" parent="Ground/Graphics" index="5"]
+position = Vector2(7, -309)
+scale = Vector2(3.08, 3.08)
+texture = ExtResource("7_xmdc4")
+
+[node name="Terrain6" type="Sprite2D" parent="Ground/Graphics" index="6"]
+position = Vector2(1293, 193)
+scale = Vector2(3.08, 3.08)
+texture = ExtResource("7_xmdc4")
+
+[node name="Terrain7" type="Sprite2D" parent="Ground/Graphics" index="7"]
+position = Vector2(1293, -209)
+scale = Vector2(3.08, 3.08)
+texture = ExtResource("7_xmdc4")
+
+[node name="Terrain8" type="Sprite2D" parent="Ground/Graphics" index="8"]
+position = Vector2(205, -483)
+rotation = 1.56903
+scale = Vector2(3.08, 3.08)
+texture = ExtResource("7_xmdc4")
+
+[node name="Terrain9" type="Sprite2D" parent="Ground/Graphics" index="9"]
+position = Vector2(603, -483)
+rotation = 1.56903
+scale = Vector2(3.08, 3.08)
+texture = ExtResource("7_xmdc4")
+
+[node name="Terrain10" type="Sprite2D" parent="Ground/Graphics" index="10"]
+position = Vector2(999, -479)
+rotation = 1.5894
+scale = Vector2(3.08, 3.08)
+texture = ExtResource("7_xmdc4")
+
+[node name="Terrain11" type="Sprite2D" parent="Ground/Graphics" index="11"]
+position = Vector2(1093, -477)
+rotation = 1.5894
+scale = Vector2(3.10207, 3.10207)
+texture = ExtResource("7_xmdc4")
+
+[node name="Terrain12" type="Sprite2D" parent="Ground/Graphics" index="12"]
+position = Vector2(1279, -287)
+rotation = 3.13363
+scale = Vector2(3.10207, 3.10207)
+texture = ExtResource("7_xmdc4")
+
+[node name="Player" parent="." index="3"]
+position = Vector2(436, 123)
